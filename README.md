@@ -1,4 +1,4 @@
-# Pico-SDV
+# Pico-SDVX
 
 A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC, SDVX and other rhythm games.
 
