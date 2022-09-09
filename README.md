@@ -16,7 +16,7 @@ A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC
 
 ### Default settings
 Name | Key| GPIO
-|:--|:--:|--:|
+|:--|:--:|:--:|
 Start | ([1]) | ([GP9])
 BTa,BTb,BTc,BTd | ([D][F][J][K]) | ([GP15][GP14][GP13][GP12])
 FXr,FXl | ([C][M]) | ([GP11][GP10])
