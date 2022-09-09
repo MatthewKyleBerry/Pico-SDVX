@@ -17,11 +17,11 @@ A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC
 ### Default settings
 
 
-Start                 ([1])           ([GP9])
-BTa,BTb,BTc,BTd   ([D][F][J][K])      ([GP15][GP14][GP13][GP12])
-FXr,FXl              ([C][M])         ([GP11][GP10])
-Dail-R               ([W][E])         ([GP8][GP7])
-Dial-L               ([O][P])         ([GP6][GP5])
+Start                 ([1])           ([GP9]) \n
+BTa,BTb,BTc,BTd   ([D][F][J][K])      ([GP15][GP14][GP13][GP12]) \n
+FXr,FXl              ([C][M])         ([GP11][GP10]) \n
+Dail-R               ([W][E])         ([GP8][GP7]) \n
+Dial-L               ([O][P])         ([GP6][GP5]) \n
 
 Double press rejection (5 cycles)
 
