@@ -35,6 +35,7 @@ Dial-L | ([O][P]) | ([GP6][GP5])
 4. Once the Pico reboots it should be ready to plug in GPIO 
 
 ### required libraries:
+- [circuitpython uf2](https://circuitpython.org/board/raspberry_pi_pico/)
 - [adafruit_hid](https://github.com/adafruit/Adafruit_CircuitPython_HID)
 - [ticks - from adafruit lib](https://circuitpython.org/libraries)
 - [asyncio - from adafruit lib](https://circuitpython.org/libraries)
