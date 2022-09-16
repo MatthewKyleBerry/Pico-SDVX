@@ -69,14 +69,8 @@ def sendPress(BTN,Key):
         BTN.inc_Time()
             
             
-def sendDial(DAIL,KeyR,KeyL):
-    if (DAIL.state1 != DIAL.value1) or (DIAL.state2 != DIAL.value2):
-        DAIL.state1 = DAIL.value1
-        DAIL.state2 = DAIL.value2
-        if (DAIL.state1 == True) and (DAIL.state2 == False):
-            keb.send(KeyL)
-        if (DAIL.state1 == False) and (DAIL.state1 == True):
-            keb.send(KeyL)
+def sendDial(DAIL,keyR,keyL):
+    pass
 
 #----------------Button-setup----------------
 
@@ -121,7 +115,7 @@ while True:
     sendPress(FXr,Keycode.C)
     sendPress(FXl,Keycode.M)
     
-    sendPress(Strt,Keycode.ONE)
+    sendPress(Strt,Keycode.K)
         
         #if BTa.value == True:
         #    keb.press(Keycode.D)
