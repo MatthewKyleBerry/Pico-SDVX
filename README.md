@@ -21,8 +21,8 @@ Name | Key| GPIO
 Start | ([1]) | ([GP9])
 BTa,BTb,BTc,BTd | ([D][F][J][K]) | ([GP15][GP14][GP13][GP12])
 FXr,FXl | ([C][M]) | ([GP11][GP10])
-Dail-R | ([W][E]) | ([GP8][GP7])
-Dial-L | ([O][P]) | ([GP6][GP5])
+Dail-R | ([O][P]) | ([GP16][GP17])
+Dial-L | ([W][E]) | ([GP18][GP19])
 
 
 
