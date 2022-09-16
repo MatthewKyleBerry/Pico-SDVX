@@ -1,6 +1,6 @@
 # Pico-SDVX
 
-A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC, SDVX and other rhythm games.
+A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC, SDVX and other rhythm games using CircuitPython.
 
 
 ### Current Features:
@@ -33,5 +33,12 @@ Dial-L | ([O][P]) | ([GP6][GP5])
 2. Unzip Pico-SDVX
 3. Drag and drop code.py, adafruit-circuitpython-hid-8.x-mpy-5.3.2, and adafruit-circuitpython-raspberry_pi_pico-en_US-7.3.3.uf2 into the Pico
 4. Once the Pico reboots it should be ready to plug in GPIO 
+
+### required libraries:
+- [adafruit_hid](https://github.com/adafruit/Adafruit_CircuitPython_HID)
+- [ticks - from adafruit lib](https://circuitpython.org/libraries)
+- [asyncio - from adafruit lib](https://circuitpython.org/libraries)
+- [rotaryio - from adafruit lib]((https://circuitpython.org/libraries)
+
 
 
