@@ -13,8 +13,7 @@ A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC
 - Debounce for Rotary encoders
 
 ### Upcoming Features:
-
-
+- coming soon
 
 ### Default settings
 Name | Key| GPIO
