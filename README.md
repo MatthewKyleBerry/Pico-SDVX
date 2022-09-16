@@ -38,7 +38,7 @@ Dial-L | ([O][P]) | ([GP6][GP5])
 - [adafruit_hid](https://github.com/adafruit/Adafruit_CircuitPython_HID)
 - [ticks - from adafruit lib](https://circuitpython.org/libraries)
 - [asyncio - from adafruit lib](https://circuitpython.org/libraries)
-- [rotaryio - from adafruit lib]((https://circuitpython.org/libraries)
+- [rotaryio - from adafruit lib](https://circuitpython.org/libraries)
 
 
 
