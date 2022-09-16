@@ -7,7 +7,7 @@ A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC
 - Plug and play
 - Button mapping for momentary switches through all GPIO pins
 - Custom keycodes for buttons
-- Double press rejection (Default 5 cycles)
+- Double press rejection (Default 10 cycles)
 - Dial mapping for Rotary encoders through all GPIO pins
 - Custom keycodes for dials
 - Debounce for Rotary encoders
