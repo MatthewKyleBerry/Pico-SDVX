@@ -30,7 +30,7 @@ Dial-L | ([W][E]) | ([GP18][GP19])
 
 1. Plug in Pico while holding down BOOTSEL
 2. Unzip Pico-SDVX
-3. Drag and drop code.py, adafruit-circuitpython-hid-8.x-mpy-5.3.2, and adafruit-circuitpython-raspberry_pi_pico-en_US-7.3.3.uf2 into the Pico
+3. Drag and drop code.py, libraries, and adafruit-circuitpython-raspberry_pi_pico-en_US-7.3.3.uf2 into the Pico
 4. Once the Pico reboots it should be ready to plug in GPIO 
 
 ### required libraries:
