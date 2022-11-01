@@ -45,6 +45,7 @@ Dial-L | ([W][E]) | ([GP18][GP19])
 - 2x 100 ohm resistors
 - 7x 1k ohm resitors
 - 7x 3.3V Diodes (I used LEDs)
+- OBSA-LHS1F-LN 100g
 - [BT Buttons](https://www.aliexpress.us/item/2251832857137258.html?spm=a2g0o.detail.1000014.24.5f14720aRXPfRW&gps-id=pcDetailBottomMoreOtherSeller&scm=1007.40050.281175.0&scm_id=1007.40050.281175.0&scm-url=1007.40050.281175.0&pvid=e1246435-960d-4233-9040-633a6960782b&_t=gps-id:pcDetailBottomMoreOtherSeller,scm-url:1007.40050.281175.0,pvid:e1246435-960d-4233-9040-633a6960782b,tpp_buckets:668%232846%238115%232000&pdp_ext_f=%7B%22sku_id%22%3A%2267375362097%22%2C%22sceneId%22%3A%2230050%22%7D&pdp_npi=2%40dis%21USD%2117.99%2117.99%21%21%21%21%21%40210323a116673347964976311ec7e6%2167375362097%21rec)
 - [FX and Start Buttons](https://www.aliexpress.com/item/2251832467827163.html?spm=2114.30010308.3.2.MPUfbB&ws_ab_test=searchweb201556_8%2Csearchweb201602_2_10017_405_404_301_407_406_10040%2Csearchweb201603_2&btsid=49678139-a03d-4cc6-b940-93b38f89f956&gatewayAdapt=4itemAdapt)
 - [Vol Rotary Encoders](https://www.amazon.com/dp/B07MWZ4CLT/?coliid=I183GLNDLFTQF5&colid=1BNLKE657MKDX&psc=1&ref_=lv_ov_lig_dp_it)
