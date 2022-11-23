@@ -11,6 +11,7 @@ A Project for turning the inexpensive Raspberry PI pico into a cotroller for USC
 - Dial mapping for Rotary encoders through all GPIO pins
 - Custom keycodes for dials
 - Debounce for Rotary encoders
+- 1ms avg polling
 
 ### Upcoming Features:
 - coming soon
