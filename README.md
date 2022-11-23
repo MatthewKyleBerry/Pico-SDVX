@@ -29,14 +29,39 @@ Dial-L | ([W][E]) | ([GP18][GP19])
 
 ### Installation
 
+##### 125hz Polling
 1. Plug in Pico while holding down BOOTSEL
 2. Unzip Pico-SDVX
-3. Drag and drop code.py, libraries, and adafruit-circuitpython-raspberry_pi_pico-en_US-7.3.3.uf2 into the Pico
-4. Once the Pico reboots it should be ready to plug in GPIO 
+3. Drag and drop adafruit-circuitpython-raspberry_pi_pico-en_US-7.3.3.uf2 into the Pico
+4. let the Pico reboot
+5. Drag and drop code.py, and libraries
+6. ... and you are ready to disconnect and plug in gpio.
 
-### Required libraries:
-- [circuitpython uf2](https://circuitpython.org/board/raspberry_pi_pico/)
-- [adafruit_hid](https://github.com/adafruit/Adafruit_CircuitPython_HID)
+##### 1000hz Polling
+
+###### Drag and drop
+1. Plug in Pico while holding down BOOTSEL
+2. Unzip Pico-SDVX
+3. Drag and drop firmware.uf2 into the Pico
+4. let the Pico reboot
+5. Drag and drop code.py, and libraries
+6. ... and you are ready to disconnect and plug in gpio.
+
+###### Build Your Own
+1. Install WSL, cmake, make, git, arm-none-eabi-gcc, pip3 and required from [link](https://learn.adafruit.com/building-circuitpython/build-circuitpython)
+2. Download source and submodules for circuitpython.
+3. Edit /shared-module/usb-hid/```__init__.c``` so that all binterval referances read 0x01 and not 0x08.
+4. build circuitpython by ```cd /port/raspberrypi``` ```sudo make BOARD=raspberry_pi_pico_w``` or ```sudo make BOARD=raspberry_pi_pico``` 
+5. Plug in Pico while holding down BOOTSEL
+6. Unzip Pico-SDVX
+7. Drag and drop firmware.uf2 into the Pico
+8. let the Pico reboot
+9. Drag and drop code.py, and libraries
+10. ... and you are ready to disconnect and plug in gpio.
+
+### Required Libraries:
+- [Optional - circuitpython uf2](https://circuitpython.org/board/raspberry_pi_pico/)
+- [adafruit_hid - from adafruit lib](https://circuitpython.org/libraries)
 - [ticks - from adafruit lib](https://circuitpython.org/libraries)
 - [asyncio - from adafruit lib](https://circuitpython.org/libraries)
 - [rotaryio - from adafruit lib](https://circuitpython.org/libraries)
