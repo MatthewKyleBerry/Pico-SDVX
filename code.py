@@ -4,6 +4,8 @@ import board
 import digitalio
 import asyncio
 import rotaryio
+from rainbowio import colorwheel
+import neopixel
 
 from adafruit_hid.mouse import Mouse
 from adafruit_hid.keyboard import Keyboard
@@ -12,7 +14,7 @@ from adafruit_hid.keycode import Keycode
 #----------------Global-Variables----------------
 
 buttonDelay = 10 #debounce iterations for buttons
-DialDelay = 10 #how much the dial needs to rotate to receive an input out of 360
+DialDelay = 25 #how much the dial needs to rotate to receive an input out of 360
 DialRatio = 120 #simulated detents
 
 VolRR = 0
@@ -20,7 +22,12 @@ VolRL = 0
 VolLR = 0
 VolLL = 0
 
+LedNum=int(24)
 
+LeftLaser=(0,170,255)
+RightLaser=(255,0,128)
+VolLPixels = neopixel.NeoPixel(board.GP20, LedNum, brightness=.7, auto_write=False)
+VolRPixels = neopixel.NeoPixel(board.GP21, LedNum, brightness=.7, auto_write=False)
 #----------------Classes----------------
 
 class Button:
@@ -109,6 +116,30 @@ async def sendPress(BTN,Key):
             BTN.zero_Time()
     if (BTN.get_Time() <= buttonDelay):
         BTN.inc_Time()
+        
+def VolLed(group,pos,color,width):
+    groupPos=int((pos)/360*LedNum)
+    dimColor=(color[0]/2,color[1]/2,color[2]/2)
+    dimmerColor=(color[0]/9,color[1]/6,color[2]/9)
+    ledList=range(groupPos,groupPos+width)
+    
+    
+    group.fill((0,0,0))
+    for i in ledList:
+        if i==groupPos+1 or i==groupPos+3:
+            group[i%LedNum]=dimColor
+            group[(i-int(LedNum/2))%LedNum]=dimColor
+        elif i==groupPos+2:
+            group[i%LedNum]=color
+            group[(i-int(LedNum/2))%LedNum]=color
+        else:
+            group[i%LedNum]=dimmerColor
+            group[(i-int(LedNum/2))%LedNum]=dimmerColor
+            
+    group.show()
+    
+    
+
 
 
 #----------------Runtime----------------
@@ -123,6 +154,7 @@ while True:
                 VolRL = 0
                 keb.send(Keycode.P)
                 VolRR = DialDelay - 360/DialRatio
+                VolLed(VolRPixels,VolRPos%360,RightLaser,5)
                  
         elif VolRPos > VolRLastPos:
             VolRL += 1
@@ -130,6 +162,8 @@ while True:
                 VolRR = 0
                 keb.send(Keycode.O)
                 VolRL = DialDelay - 360/DialRatio
+                VolLed(VolRPixels,VolRPos%360,RightLaser,5)
+
     VolRLastPos = VolRPos
     
     if (VolLPos != VolLLastPos):
@@ -139,6 +173,8 @@ while True:
                 VolLL = 0
                 keb.send(Keycode.E)
                 VolLR = DialDelay - 360/DialRatio
+                VolLed(VolLPixels,VolLPos%360,LeftLaser,5)
+
                  
         elif VolLPos > VolLLastPos:
             VolLL += 1
@@ -146,8 +182,12 @@ while True:
                 VolLR = 0
                 keb.send(Keycode.W)
                 VolLL = DialDelay - 360/DialRatio
+                VolLed(VolLPixels,VolLPos%360,LeftLaser,5)
+
     VolLLastPos = VolLPos
     
-    asyncio.run(main())
     
-
+    
+        
+    
+    asyncio.run(main())
